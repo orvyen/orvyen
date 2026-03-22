@@ -1,0 +1,31 @@
+name: Orvyen SQL Auditor
+description: Audit your SQL/dbt codebase for architectural issues and post findings to PR
+author: Orvyen Contributors
+
+inputs:
+  models-path:
+    description: Path to dbt models directory or SQL folder
+    required: false
+    default: models
+  
+  format:
+    description: Output format (terminal, html, json)
+    required: false
+    default: html
+  
+  github-token:
+    description: GitHub token for posting PR comments
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  findings-count:
+    description: Total number of findings
+  critical-count:
+    description: Number of critical findings
+  report-path:
+    description: Path to generated report file
+
+runs:
+  using: node20
+  main: dist/action/index.js

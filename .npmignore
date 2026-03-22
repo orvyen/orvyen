@@ -1,0 +1,14 @@
+src/
+action/
+tests/
+fixtures/
+.github/
+.orvyen/
+*.test.ts
+*.map
+node_modules/
+.git*
+.DS_Store
+.eslintrc*
+tsconfig.json
+CLAUDE.md

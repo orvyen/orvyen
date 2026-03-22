@@ -1,0 +1,40 @@
+name: Orvyen SQL Audit
+
+on:
+  pull_request:
+    paths:
+      - '**.sql'
+      - '**/schema.yml'
+      - 'models/**'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run Orvyen Audit
+        id: audit
+        uses: ./
+        with:
+          models-path: models
+          format: json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Check audit results
+        if: always()
+        run: |
+          echo "✅ Audit Complete"
+          echo "📊 Total findings: ${{ steps.audit.outputs.findings-count }}"
+          echo "🔴 Critical: ${{ steps.audit.outputs.critical-count }}"
+      
+      - name: Fail on critical findings
+        if: steps.audit.outputs.critical-count > 0
+        run: exit 1

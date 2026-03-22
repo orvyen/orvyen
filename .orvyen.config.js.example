@@ -1,0 +1,26 @@
+/** @type {import('./dist/types/config').OrvyenConfig} */
+export default {
+  // Include patterns (glob)
+  include: ["models/**/*.sql"],
+
+  // Exclude patterns (glob)
+  exclude: ["models/**/*staging*.sql"],
+
+  // Enable/disable or configure severity for each check
+  checks: {
+    unused_model: true,
+    missing_tests: { severity: "high" },
+    duplicate_logic: true,
+    broken_ref: true,
+    grain_misalignment: { severity: "high" },
+    circular_dependency: true,
+    undocumented_model: false, // disable if too noisy
+    god_model: { severity: "medium" },
+  },
+
+  // Output format: 'terminal' | 'html' | 'json' | 'all'
+  output: "all",
+
+  // Where to write reports
+  outputDir: ".orvyen",
+};

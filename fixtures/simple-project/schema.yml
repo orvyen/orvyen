@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: users
+    description: User dimension table
+    columns:
+      - name: user_id
+        description: Unique user identifier
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - unique
+
+  - name: user_orders
+    description: Aggregated user order metrics
+    tests:
+      - dbt_expectations.expect_column_to_exist:
+          column_name: user_id
+
+  - name: orders
+    description: Raw orders from source
+    tests:
+      - not_null:
+          column_name: order_id

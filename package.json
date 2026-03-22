@@ -1,0 +1,59 @@
+{
+  "name": "orvyen",
+  "version": "0.1.0",
+  "description": "ESLint for your SQL codebase — audit any dbt or SQL project in one command",
+  "main": "dist/src/index.js",
+  "bin": {
+    "orvyen": "dist/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "watch": "tsc --project tsconfig.json --watch",
+    "dev": "node --loader tsx src/index.ts",
+    "test": "node --test tests/**/*.test.ts",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "sql",
+    "dbt",
+    "audit",
+    "linter",
+    "cli",
+    "architecture",
+    "data-engineering"
+  ],
+  "author": "Orvyen Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orvy/orvyen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orvy/orvyen/issues"
+  },
+  "homepage": "https://github.com/orvy/orvyen",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "cosmiconfig": "^9.0.0",
+    "ink": "^6.8.0",
+    "ink-select-input": "^6.2.0",
+    "ink-text-input": "^6.0.0",
+    "prompts": "^2.4.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/prompts": "^2.4.9",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
