@@ -1,4 +1,4 @@
-# Orvyen 🔍
+# Orvyen
 
 **The SQL Architect — your dbt & SQL linter**
 
@@ -8,10 +8,10 @@ Audit any SQL/dbt project in one command. Get a beautiful report of architectura
 npx orvyen ./models
 ```
 
-⚡ **Fast** (< 30ms)  
-🎁 **Free** (open source)  
-🚀 **Zero setup** (works instantly)  
-📊 **Beautiful reports** (HTML, JSON, terminal)
+🔴 **Critical issues detected** (fails CI)
+🟠 **High priority findings** (data quality)
+🟡 **Medium suggestions** (refactor candidates)
+⚪ **Low friction items** (nice to have)
 
 ---
 
@@ -28,11 +28,11 @@ Orvyen runs **locally, instantly, free**.
 | **Broken refs** | Reference to non-existent model | 🔴 Breaks dbt run |
 | **Circular dependencies** | Models depending on each other | 🔴 Breaks dbt run |
 | **Missing tests** | Models with no dbt tests | 🟠 Data quality risk |
-| **Unused models** | Models nothing references | 🟢 Dead code |
+| **Unused models** | Models nothing references | ⚪ Dead code |
 | **Grain misalignment** | JOINs at wrong granularity | 🟠 Silent data bugs |
 | **Duplicate logic** | Copy-paste SQL across models | 🟠 Maintenance nightmare |
 | **God models** | Single model doing too much | 🟡 Refactor candidate |
-| **Undocumented models** | Missing description | 🟢 Developer friction |
+| **Undocumented models** | Missing description | ⚪ Developer friction |
 
 ---
 
@@ -83,7 +83,7 @@ Audit Summary:
 npx orvyen ./models --format html
 ```
 
-Creates `.orvyen/report.html` — open in browser and share with your team! 📧
+Creates `.orvyen/report.html` — open in browser and share with your team! ✅
 
 ### 3. Watch mode
 
@@ -264,14 +264,14 @@ All **local**. No cloud calls. No data sent anywhere.
 
 Works with any SQL dialect:
 
-- ✅ Snowflake
-- ✅ BigQuery
-- ✅ Postgres
-- ✅ MySQL
-- ✅ Redshift
-- ✅ DuckDB
-- ✅ Spark SQL
-- ✅ Generic SQL
+- 🔴 Snowflake
+- 🔴 BigQuery
+- 🔴 Postgres
+- 🔴 MySQL
+- 🔴 Redshift
+- 🔴 DuckDB
+- 🔴 Spark SQL
+- 🔴 Generic SQL
 
 ---
 
@@ -349,11 +349,11 @@ MIT
 
 ## Need Help?
 
-- 📖 **Docs**: [orvyen.com](https://orvyen.com)
-- 🐛 **Issues**: [GitHub](https://github.com/om/orvyen/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/om/orvyen/discussions)
-- 🐦 **Twitter**: [@orvyen](https://twitter.com/orvyen)
+- � **Docs**: [orvyen.com](https://orvyen.com)
+- 🔴 **Issues**: [GitHub](https://github.com/om/orvyen/issues)
+- 🟡 **Discussions**: [GitHub Discussions](https://github.com/om/orvyen/discussions)
+- ⚪ **Twitter**: [@orvyen](https://twitter.com/orvyen)
 
 ---
 
-Made with ❤️ for data engineers
+Made with 🔴 for data engineers
