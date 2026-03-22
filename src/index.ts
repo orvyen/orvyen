@@ -14,6 +14,7 @@ import {
 } from "./cli/display";
 import { printFindings } from "./reporter/terminal-reporter";
 import { generateHtmlReport } from "./reporter/html-reporter";
+import { startIntro, startLoading } from "./animation/catAnimation";
 import type { OrvyenConfig } from "./types/index";
 
 const defaultConfig: OrvyenConfig = {
@@ -124,6 +125,9 @@ async function main(): Promise<void> {
     return;
   }
 
+  // Show intro animation on startup
+  await startIntro();
+
   // Launch interactive mode
   if (args.interactive) {
     try {
@@ -167,9 +171,16 @@ async function main(): Promise<void> {
         // Callback after each audit in watch mode
       });
     } else {
-      // Run single audit
-      const result = await runAudit(config, resolvedDir);
-
+      // Run single audit with loading animation
+      const stop = startLoading();
+      
+      let result: Awaited<ReturnType<typeof runAudit>>;
+      try {
+        result = await runAudit(config, resolvedDir);
+      } finally {
+        stop();
+      }
+      
       // Handle different output formats
       if (args.format === "json") {
         console.log(JSON.stringify({
@@ -227,6 +238,7 @@ async function main(): Promise<void> {
       if (criticalCount > 0) {
         process.exit(1);
       }
+    }
     }
   } catch (error) {
     printError(
