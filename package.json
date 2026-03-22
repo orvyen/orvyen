@@ -1,6 +1,6 @@
 {
   "name": "orvyen",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "ESLint for your SQL codebase — audit any dbt or SQL project in one command",
   "main": "dist/src/index.js",
   "bin": {
