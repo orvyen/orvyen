@@ -156,8 +156,6 @@ async function main(): Promise<void> {
   }
 
   try {
-    printHeader();
-
     const resolvedDir = path.resolve(args.targetDir);
     const config: OrvyenConfig = {
       ...defaultConfig,
