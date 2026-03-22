@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: customers
+    description: "Customer table"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: orders
+    description: "Orders table"
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null

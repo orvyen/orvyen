@@ -273,11 +273,11 @@
     <div class="meta">
       <div class="meta-item">
         <div class="meta-label">Project</div>
-        <div class="meta-value">/Users/om/Documents/Orvyen/fixtures/broken-project</div>
+        <div class="meta-value">/Users/om/Documents/Orvyen/test-run/models</div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Models Analyzed</div>
-        <div class="meta-value">10</div>
+        <div class="meta-value">2</div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Scan Time</div>
@@ -285,20 +285,20 @@
       </div>
       <div class="meta-item">
         <div class="meta-label">Generated</div>
-        <div class="meta-value">2026-03-22T21:07:37.869Z</div>
+        <div class="meta-value">2026-03-22T21:45:31.384Z</div>
       </div>
     </div>
 
     <div class="stats">
       
     <div class="stat-card critical">
-      <div class="stat-number critical">3</div>
+      <div class="stat-number critical">0</div>
       <div class="stat-label">Critical</div>
     </div>
   
       
     <div class="stat-card high">
-      <div class="stat-number high">3</div>
+      <div class="stat-number high">0</div>
       <div class="stat-label">High</div>
     </div>
   
@@ -310,7 +310,7 @@
   
       
     <div class="stat-card low">
-      <div class="stat-number low">14</div>
+      <div class="stat-number low">2</div>
       <div class="stat-label">Low</div>
     </div>
   
@@ -318,112 +318,8 @@
 
     <div class="content">
       
-    <div class="severity-section critical">
-      <h2>🔴 CRITICAL (3)</h2>
-      <table class="findings-table">
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Finding Type</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-    <tr>
-      <td><span class="model-name">broken_model</span></td>
-      <td><span class="finding-type">broken_ref</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;broken_model&#039; references a model named &#039;users&#039; which does not exist in the project.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Check the spelling of the reference or ensure the model exists. Update the ref() call to point to the correct model name.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">broken_model</span></td>
-      <td><span class="finding-type">broken_ref</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;broken_model&#039; references a model named &#039;nonexistent_table&#039; which does not exist in the project.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Check the spelling of the reference or ensure the model exists. Update the ref() call to point to the correct model name.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">orders_enriched</span></td>
-      <td><span class="finding-type">broken_ref</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;orders_enriched&#039; references a model named &#039;users&#039; which does not exist in the project.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Check the spelling of the reference or ensure the model exists. Update the ref() call to point to the correct model name.</div>
-        </div>
-      </td>
-    </tr>
-  
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="severity-section high">
-      <h2>🟠 HIGH (3)</h2>
-      <table class="findings-table">
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Finding Type</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-    <tr>
-      <td><span class="model-name">broken_model</span></td>
-      <td><span class="finding-type">missing_tests</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;broken_model&#039; has no dbt tests attached. No safety net to catch data quality issues.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add at least one test to this model. Consider tests like: unique, not_null, or custom tests for business logic.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">orders_enriched</span></td>
-      <td><span class="finding-type">missing_tests</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;orders_enriched&#039; has no dbt tests attached. No safety net to catch data quality issues.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add at least one test to this model. Consider tests like: unique, not_null, or custom tests for business logic.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">unused_model</span></td>
-      <td><span class="finding-type">missing_tests</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;unused_model&#039; has no dbt tests attached. No safety net to catch data quality issues.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add at least one test to this model. Consider tests like: unique, not_null, or custom tests for business logic.</div>
-        </div>
-      </td>
-    </tr>
-  
-        </tbody>
-      </table>
-    </div>
-    
     <div class="severity-section low">
-      <h2>🟢 LOW (14)</h2>
+      <h2>🟢 LOW (2)</h2>
       <table class="findings-table">
         <thead>
           <tr>
@@ -434,18 +330,6 @@
         </thead>
         <tbody>
           
-    <tr>
-      <td><span class="model-name">broken_model</span></td>
-      <td><span class="finding-type">unused_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;broken_model&#039; is not referenced by any other model. It may be dead code.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Review if this model is still needed. If not, consider removing it to reduce maintenance burden.</div>
-        </div>
-      </td>
-    </tr>
-  
     <tr>
       <td><span class="model-name">customers</span></td>
       <td><span class="finding-type">unused_model</span></td>
@@ -459,145 +343,13 @@
     </tr>
   
     <tr>
-      <td><span class="model-name">orders_enriched</span></td>
-      <td><span class="finding-type">unused_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;orders_enriched&#039; is not referenced by any other model. It may be dead code.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Review if this model is still needed. If not, consider removing it to reduce maintenance burden.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">unused_model</span></td>
-      <td><span class="finding-type">unused_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;unused_model&#039; is not referenced by any other model. It may be dead code.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Review if this model is still needed. If not, consider removing it to reduce maintenance burden.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">broken_model</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;broken_model&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">categories</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;categories&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">customers</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;customers&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
       <td><span class="model-name">orders</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
+      <td><span class="finding-type">unused_model</span></td>
       <td>
-        <div class="finding-desc">Model &#039;orders&#039; is missing a description in schema.yml.</div>
+        <div class="finding-desc">Model &#039;orders&#039; is not referenced by any other model. It may be dead code.</div>
         <div class="suggestion-box">
           <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">orders_enriched</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;orders_enriched&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">products</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;products&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">regions</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;regions&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">stores</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;stores&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">unused_model</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;unused_model&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
-        </div>
-      </td>
-    </tr>
-  
-    <tr>
-      <td><span class="model-name">vendors</span></td>
-      <td><span class="finding-type">undocumented_model</span></td>
-      <td>
-        <div class="finding-desc">Model &#039;vendors&#039; is missing a description in schema.yml.</div>
-        <div class="suggestion-box">
-          <div class="suggestion-title">💡 Suggestion</div>
-          <div class="suggestion-text">Add a description in schema.yml to document the purpose and business logic of this model.</div>
+          <div class="suggestion-text">Review if this model is still needed. If not, consider removing it to reduce maintenance burden.</div>
         </div>
       </td>
     </tr>

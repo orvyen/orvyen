@@ -45,18 +45,15 @@ export class TerminalRenderer {
    * Header section with tool branding
    */
   private renderHeader(ctx: RenderContext): string {
-    const border = '═'.repeat(this.width - 2);
     const pathShort = ctx.projectPath.length > 50 
       ? '...' + ctx.projectPath.slice(-47)
       : ctx.projectPath;
 
     const header = [
-      `╔${border}╗`,
-      `║${' '.repeat(this.width - 2)}║`,
-      `║  ${this.col('cyan', '🔍')} ${this.bold('Orvyen — SQL Architecture Auditor')}${' '.repeat(this.width - 60)}║`,
-      `║  ${this.col('dim', `Auditing ${pathShort} • ${ctx.modelsAnalyzed} models`)}${' '.repeat(Math.max(0, this.width - 55))}║`,
-      `║${' '.repeat(this.width - 2)}║`,
-      `╚${border}╝`,
+      ``,
+      `${this.col('cyan', '🔍')} ${this.bold('ORVYEN — SQL Architecture Auditor')}`,
+      `${this.col('dim', `Auditing ${pathShort} • ${ctx.modelsAnalyzed} models`)}`,
+      ``,
     ];
 
     return header.join('\n');

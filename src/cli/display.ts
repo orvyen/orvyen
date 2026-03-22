@@ -1,23 +1,19 @@
 import chalk from "chalk";
 
 /**
- * Print ASCII banner
+ * Print ASCII banner - showing ORVYEN logo
  */
 function printBanner(): void {
   const logo = `
-${chalk.cyan('╔═══════════════════════════════════════════════════════════════╗')}
-${chalk.cyan('║')}                                                               ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.bold.cyan(' ██████╗ ██████╗ ██╗   ██╗██╗   ██╗███████╗███╗   ██╗')}  ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.bold.cyan('██╔═══██╗██╔══██╗██║   ██║██║   ██║██╔════╝████╗  ██║')}  ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.bold.cyan('██║   ██║██████╔╝██║   ██║██║   ██║█████╗  ██╔██╗ ██║')}  ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.bold.cyan('██║   ██║██╔══██╗╚██╗ ██╔╝██║   ██║██╔══╝  ██║╚██╗██║')}  ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.bold.cyan('╚██████╔╝██║  ██║ ╚████╔╝ ╚██████╔╝███████╗██║ ╚████║')}  ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.bold.cyan(' ╚═════╝ ╚═╝  ╚═╝  ╚═══╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝')}  ${chalk.cyan('║')}
-${chalk.cyan('║')}                                                               ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.green.bold('SQL Architecture Auditor')}                                  ${chalk.cyan('║')}
-${chalk.cyan('║')}  ${chalk.dim('The intelligent way to audit your SQL codebase')}           ${chalk.cyan('║')}
-${chalk.cyan('║')}                                                               ${chalk.cyan('║')}
-${chalk.cyan('╚═══════════════════════════════════════════════════════════════╝')}
+${chalk.bold.cyan(' ██████╗  ██████╗ ██████╗ ██╗   ██╗███████╗███╗   ██╗')}
+${chalk.bold.cyan('██╔═══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝████╗  ██║')}
+${chalk.bold.cyan('██║   ██║██║   ██║██║  ██║██║   ██║█████╗  ██╔██╗ ██║')}
+${chalk.bold.cyan('██║   ██║██║   ██║██║  ██║██║   ██║██╔══╝  ██║╚██╗██║')}
+${chalk.bold.cyan('╚██████╔╝╚██████╔╝██████╔╝╚██████╔╝███████╗██║ ╚████║')}
+${chalk.bold.cyan(' ╚═════╝  ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═══╝')}
+
+${chalk.green.bold('SQL Architecture Auditor')}
+${chalk.dim('The intelligent way to audit your SQL codebase')}
   `
   console.log(logo)
 }

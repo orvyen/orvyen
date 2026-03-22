@@ -64,10 +64,10 @@ export const OrvyenApp: React.FC = () => {
     }
   }
 
-  const handleFormatSelect = (val: string) => {
+  const handleFormatSelect = (item: { value: string }) => {
     setState((s: AppState) => ({
       ...s,
-      format: val as OrvyenConfig['output'],
+      format: item.value as OrvyenConfig['output'],
       screen: 'running',
     }))
   }
