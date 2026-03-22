@@ -14,7 +14,7 @@ import {
 } from "./cli/display";
 import { printFindings } from "./reporter/terminal-reporter";
 import { generateHtmlReport } from "./reporter/html-reporter";
-import { startIntro, startLoading } from "./animation/catAnimation";
+import { startIntro, startLoading } from "./animation/logoAnimation";
 import type { OrvyenConfig } from "./types/index";
 
 const defaultConfig: OrvyenConfig = {
